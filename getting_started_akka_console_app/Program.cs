@@ -9,32 +9,10 @@ using Akka;
 using Akka.Actor;
     
 
+
 namespace getting_started_akka_console_app
 {
-    //create an(immutable) message type that your actor will respond to
-    public class Greet
-    {
-        public string Who { get; set; }
-
-        public Greet(string who)
-        {
-            who = who;
-        }
-    }
-
-
-    //create the actor class
-    public class GrettingActor : ReceiveActor
-    {
-        public GrettingActor()
-        {
-            //tell the actor to respond 
-            //to the Greet message
-            Receive<Greet>(greet => Console.WriteLine("Hello {0}", greet.Who));
-        }
-    }
-
-
+        
     class Program
     {
         //http://getakka.net/docs/Getting%20started
